@@ -1,3 +1,4 @@
+
 import domain.*;
 
 import java.time.LocalDate;
@@ -19,5 +20,5 @@ public class Main {
         fitness.ListMembershipWorkout();
 
     }
-
 }
+
