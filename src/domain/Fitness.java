@@ -21,7 +21,7 @@ public class Fitness {
             } else if (((membership.ticket).equals(TypeTicket.DAILY_TICKET)) && (currentTime.isAfter(dailyTicketTime))) {
                 System.out.println("Доступ для дневного абонемента запрещен после 16:00");
             } else if ((membershipGym.size() > 20) | (membershipSwimPool.size() > 20) | (membershipSwimPool.size() > 20)) {
-                System.out.println(zone + " переполнен");
+                System.out.println(zone.getTranslation() + " переполнен");
                 } else  {
                 switch (zone) {
                     case GYM:
