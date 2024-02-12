@@ -22,23 +22,24 @@ public class Fitness {
                 System.out.println("Доступ для дневного абонемента запрещен после 16:00");
             } else if ((membershipGym.size() > 20) | (membershipSwimPool.size() > 20) | (membershipSwimPool.size() > 20)) {
                 System.out.println(zone.getTranslation() + " переполнен");
-                } else  {
+                } else {
                 switch (zone) {
                     case GYM:
                         if ((membershipSwimPool.contains(membership.getOwner().getName()))
-                            || (membershipWorkout.contains(membership.getOwner().getName()))) {
-                        System.out.println("Абонемент зарегистрирован в другой зоне");
+                                || (membershipWorkout.contains(membership.getOwner().getName()))) {
+                            System.out.println("Абонемент зарегистрирован в другой зоне");
                         } else {
                             System.out.println("Добро пожаловать в " + zone.getTranslation());
                             membershipGym.add(membership.getOwner().getName() + " " + membership.getOwner().getSurName());
-                        } break;
+                        }
+                        break;
                     case SWIM_POOL:
                         if ((membership.ticket).equals(TypeTicket.DAILY_TICKET)) {
                             System.out.println("Ваш абонемент не позволяет пройти в эту зону");
                         } else if ((membershipGym.contains(membership.getOwner().getName()))
-                                    || (membershipWorkout.contains(membership.getOwner().getName()))) {
-                                System.out.println("Абонемент зарегистрирован в другой зоне");
-                            } else {
+                                || (membershipWorkout.contains(membership.getOwner().getName()))) {
+                            System.out.println("Абонемент зарегистрирован в другой зоне");
+                        } else {
                             System.out.println("Добро пожаловать в " + zone.getTranslation());
                             membershipSwimPool.add(membership.getOwner().getName() + " " + membership.getOwner().getSurName());
                         }
@@ -47,21 +48,19 @@ public class Fitness {
                         if ((membership.ticket).equals(TypeTicket.SINGLE_TICKET)) {
                             System.out.println("Ваш абонемент не позволяет пройти в эту зону");
                         } else if ((membershipSwimPool.contains(membership.getOwner().getName()))
-                            || (membershipGym.contains(membership.getOwner().getName()))) {
-                        System.out.println("Абонемент зарегистрирован в другой зоне");
+                                || (membershipGym.contains(membership.getOwner().getName()))) {
+                            System.out.println("Абонемент зарегистрирован в другой зоне");
                         } else {
                             System.out.println("Добро пожаловать в " + zone.getTranslation());
                             membershipWorkout.add(membership.getOwner().getName() + " " + membership.getOwner().getSurName());
                         }
                         break;
                 }
+                System.out.println("Клиент: " + membership.getOwner().getName() + " " + membership.getOwner().getSurName() +
+                        " " + membership.getOwner().getBirthYear() + " года рождения");
+                System.out.println("Тренировочная зона: " + zone.getTranslation());
+                System.out.println("Дата и время посещения: " + new Date());
             }
-
-            System.out.println("Клиент: " + membership.getOwner().getName() + " " + membership.getOwner().getSurName() +
-                    " " + membership.getOwner().getBirthYear() + " года рождения");
-            System.out.println("Тренировочная зона: " + zone.getTranslation());
-            System.out.println("Дата и время посещения: " + new Date());
-
 
         }
     public void ListMembershipGYM() {
