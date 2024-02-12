@@ -8,7 +8,6 @@ public class Fitness {
     private final List<String> membershipGym = new ArrayList<>();
     private final List<String> membershipSwimPool = new ArrayList<>();
     private final List<String> membershipWorkout = new ArrayList<>();
-
     private final LocalDate currentDate = LocalDate.now();
     private final LocalTime currentTime = LocalTime.now();
     private final LocalTime openTime = LocalTime.of(8, 0);
