@@ -21,6 +21,9 @@ public class Membership {
     public LocalDate getEndDate(){
         return endDate;
     }
+    public TypeTicket getTypeTicket() {
+        return ticket;
+    }
     public Client getOwner(){
         return owner;
     }
